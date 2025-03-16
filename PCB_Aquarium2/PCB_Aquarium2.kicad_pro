@@ -43,15 +43,21 @@
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
-        "silk_text_size_h": 1.0,
-        "silk_text_size_v": 1.0,
-        "silk_text_thickness": 0.1,
+        "silk_text_size_h": 0.5,
+        "silk_text_size_v": 0.5,
+        "silk_text_thickness": 0.125,
         "silk_text_upright": false,
         "zones": {
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -118,7 +124,7 @@
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 0.0,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
@@ -179,7 +185,9 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -206,7 +214,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.45,
+          "drill": 0.3
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -611,6 +628,82 @@
     [
       "4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f",
       "Root"
+    ],
+    [
+      "93cb062e-b48a-4ff4-9534-f1dcb451c7c1",
+      "PH_meter"
+    ],
+    [
+      "d7a902ca-7d8e-4982-8b0b-47dec4f3eb59",
+      "Bouttons"
+    ],
+    [
+      "5d391acf-d6ea-4d4c-b787-b71a583dc165",
+      "Ventilateur1"
+    ],
+    [
+      "ea4cad06-5fb6-43d8-8ab4-a12c8caa015c",
+      "Ventilateur2"
+    ],
+    [
+      "e3d823d5-1466-4ea5-81dd-ee852f5114d5",
+      "Ventilateur3"
+    ],
+    [
+      "f32b2777-c21f-4b7d-8b68-c5d6df7ac0b7",
+      "Screens"
+    ],
+    [
+      "69d0bc71-8724-4ab6-8c69-dce2f72a8501",
+      "test_en_gouttes"
+    ],
+    [
+      "803b018c-4ba1-4aec-9d52-cb17afc8b192",
+      "Pompes"
+    ],
+    [
+      "4b04776f-b05d-4ccc-97d1-7b7226f360cd",
+      "Water_sensor"
+    ],
+    [
+      "b830814e-60b2-4976-ac6f-93ba76469b06",
+      "Ventilateur"
+    ],
+    [
+      "56a66a0d-4313-4809-9cdd-91e8a39fe174",
+      "Rampe_LED+feeder"
+    ],
+    [
+      "0b76def2-ce80-4218-8e3b-ba1c1b4e7345",
+      "Régulateur de tension"
+    ],
+    [
+      "d8f2eee3-0952-4164-a5fd-b230302140af",
+      "Ventilateur"
+    ],
+    [
+      "abfb2004-d275-4aa1-bcad-0821a83fd301",
+      "XT60"
+    ],
+    [
+      "6b08732c-65b5-4020-967e-cc3e23d6bed3",
+      "RasberryPi4"
+    ],
+    [
+      "c9f60022-4980-4a06-8195-869d80fa4c60",
+      "STlink"
+    ],
+    [
+      "9b3ea6c7-576b-4238-ae95-35be57471754",
+      "LED_internes"
+    ],
+    [
+      "6996448a-079a-4fbd-aac0-272391141173",
+      "Chauffage"
+    ],
+    [
+      "25085fa0-d3fc-4eed-8ed3-1cfc9369e5eb",
+      "HC05"
     ]
   ],
   "text_variables": {}
