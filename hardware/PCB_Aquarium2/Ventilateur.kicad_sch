@@ -513,15 +513,67 @@
 			(embedded_fonts no)
 		)
 	)
+	(junction
+		(at 140.97 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c2ee14c8-bf51-49f9-a8fe-64976c092808")
+	)
+	(junction
+		(at 140.97 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d4d01969-1bc5-44b0-bf05-69008ff0c11b")
+	)
 	(wire
 		(pts
-			(xy 143.51 109.22) (xy 144.78 109.22)
+			(xy 140.97 106.68) (xy 144.78 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5543cff4-1e2f-43b3-8241-df2e00894eb1")
+	)
+	(wire
+		(pts
+			(xy 144.78 114.3) (xy 144.78 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "602ef90e-f89d-470a-befd-615b059feccb")
+	)
+	(wire
+		(pts
+			(xy 140.97 114.3) (xy 144.78 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6474f27c-887a-4880-8d5d-37d53aeca0d8")
+	)
+	(wire
+		(pts
+			(xy 137.16 114.3) (xy 140.97 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b0ed1093-2b96-4b17-80f2-3cef0ffa0af3")
+	)
+	(wire
+		(pts
+			(xy 137.16 106.68) (xy 140.97 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc84ffe9-62b0-472c-bf42-66356691ec35")
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
@@ -533,7 +585,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2481034d-4eb4-4754-abc7-e748030c3540")
-		(property "Reference" "J4"
+		(property "Reference" "J3"
 			(at 152.4 106.6799 0)
 			(effects
 				(font
@@ -587,19 +639,19 @@
 		(instances
 			(project "PCB_Aquarium2"
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/5d391acf-d6ea-4d4c-b787-b71a583dc165"
-					(reference "J4")
+					(reference "J3")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/d8f2eee3-0952-4164-a5fd-b230302140af"
-					(reference "J33")
+					(reference "J32")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/e3d823d5-1466-4ea5-81dd-ee852f5114d5"
-					(reference "J6")
+					(reference "J5")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/ea4cad06-5fb6-43d8-8ab4-a12c8caa015c"
-					(reference "J5")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -607,7 +659,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 143.51 109.22 0)
+		(at 137.16 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -615,8 +667,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "382e8c65-0567-48ac-9451-b6ad1930c13e")
-		(property "Reference" "#PWR013"
-			(at 143.51 115.57 0)
+		(property "Reference" "#PWR011"
+			(at 137.16 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -625,7 +677,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 143.51 114.3 0)
+			(at 137.16 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -633,7 +685,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 143.51 109.22 0)
+			(at 137.16 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -642,7 +694,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 143.51 109.22 0)
+			(at 137.16 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -651,7 +703,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 143.51 109.22 0)
+			(at 137.16 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -665,19 +717,19 @@
 		(instances
 			(project "PCB_Aquarium2"
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/5d391acf-d6ea-4d4c-b787-b71a583dc165"
-					(reference "#PWR013")
+					(reference "#PWR011")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/d8f2eee3-0952-4164-a5fd-b230302140af"
-					(reference "#PWR081")
+					(reference "#PWR079")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/e3d823d5-1466-4ea5-81dd-ee852f5114d5"
-					(reference "#PWR017")
+					(reference "#PWR015")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/ea4cad06-5fb6-43d8-8ab4-a12c8caa015c"
-					(reference "#PWR015")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -685,7 +737,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 140.97 106.68 90)
+		(at 140.97 110.49 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -693,24 +745,26 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4158fc3c-28b3-4f23-8d75-e7df526a23e7")
-		(property "Reference" "C39"
-			(at 140.97 99.06 90)
+		(property "Reference" "C12"
+			(at 144.78 109.2199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Value" "1u"
-			(at 140.97 101.6 90)
+			(at 144.78 111.7599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 144.78 105.7148 0)
+			(at 140.0048 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -719,7 +773,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 140.97 106.68 0)
+			(at 140.97 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -728,7 +782,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 140.97 106.68 0)
+			(at 140.97 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -743,21 +797,21 @@
 			(uuid "9b3b93a2-6d88-459b-abaf-45217923722f")
 		)
 		(instances
-			(project ""
+			(project "PCB_Aquarium2"
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/5d391acf-d6ea-4d4c-b787-b71a583dc165"
-					(reference "C39")
+					(reference "C12")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/d8f2eee3-0952-4164-a5fd-b230302140af"
-					(reference "C42")
+					(reference "C40")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/e3d823d5-1466-4ea5-81dd-ee852f5114d5"
-					(reference "C41")
+					(reference "C14")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/ea4cad06-5fb6-43d8-8ab4-a12c8caa015c"
-					(reference "C40")
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -773,7 +827,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b7567c75-a1a2-4560-a1a5-8c67c0ec6831")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR010"
 			(at 137.16 110.49 0)
 			(effects
 				(font
@@ -823,19 +877,19 @@
 		(instances
 			(project "PCB_Aquarium2"
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/5d391acf-d6ea-4d4c-b787-b71a583dc165"
-					(reference "#PWR012")
+					(reference "#PWR010")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/d8f2eee3-0952-4164-a5fd-b230302140af"
-					(reference "#PWR080")
+					(reference "#PWR078")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/e3d823d5-1466-4ea5-81dd-ee852f5114d5"
-					(reference "#PWR016")
+					(reference "#PWR014")
 					(unit 1)
 				)
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/b830814e-60b2-4976-ac6f-93ba76469b06/ea4cad06-5fb6-43d8-8ab4-a12c8caa015c"
-					(reference "#PWR014")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)

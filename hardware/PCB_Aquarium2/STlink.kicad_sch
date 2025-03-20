@@ -694,7 +694,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "52009172-f38e-410f-bbe9-799e41754144")
-		(property "Reference" "J36"
+		(property "Reference" "J35"
 			(at 128.27 93.9799 0)
 			(effects
 				(font
@@ -794,7 +794,7 @@
 		(instances
 			(project "PCB_Aquarium2"
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/c9f60022-4980-4a06-8195-869d80fa4c60"
-					(reference "J36")
+					(reference "J35")
 					(unit 1)
 				)
 			)
@@ -811,7 +811,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c74851b4-bacf-495e-bbfa-b410349895e8")
-		(property "Reference" "#PWR087"
+		(property "Reference" "#PWR085"
 			(at 139.7 121.92 0)
 			(effects
 				(font
@@ -861,7 +861,7 @@
 		(instances
 			(project "PCB_Aquarium2"
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/c9f60022-4980-4a06-8195-869d80fa4c60"
-					(reference "#PWR087")
+					(reference "#PWR085")
 					(unit 1)
 				)
 			)
@@ -877,7 +877,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dabc0faf-3404-468e-ab8c-6a121c3c1bff")
-		(property "Reference" "#PWR086"
+		(property "Reference" "#PWR084"
 			(at 139.7 81.28 0)
 			(effects
 				(font
@@ -927,7 +927,7 @@
 		(instances
 			(project "PCB_Aquarium2"
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/c9f60022-4980-4a06-8195-869d80fa4c60"
-					(reference "#PWR086")
+					(reference "#PWR084")
 					(unit 1)
 				)
 			)

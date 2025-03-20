@@ -571,15 +571,67 @@
 			(embedded_fonts no)
 		)
 	)
+	(junction
+		(at 135.89 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "32e5f281-8be3-4e77-9afa-d00b2b320a79")
+	)
+	(junction
+		(at 135.89 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33c19ba2-1c23-4036-9527-6ac0c666d109")
+	)
 	(wire
 		(pts
-			(xy 128.27 86.36) (xy 142.24 86.36)
+			(xy 135.89 86.36) (xy 142.24 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d7d3666-0699-4226-a1bc-9517f09d5c3a")
+	)
+	(wire
+		(pts
+			(xy 128.27 86.36) (xy 135.89 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "61a19c9e-87bd-486c-8bc1-11a7b8ee248f")
+	)
+	(wire
+		(pts
+			(xy 142.24 78.74) (xy 135.89 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f71c31c-9466-4748-a059-8ad77d5860f6")
+	)
+	(wire
+		(pts
+			(xy 135.89 78.74) (xy 133.35 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0fbbe32-f74d-43bf-880f-1dcef421606c")
+	)
+	(wire
+		(pts
+			(xy 142.24 83.82) (xy 142.24 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bba0029a-49eb-4a38-8062-867851b55107")
 	)
 	(hierarchical_label "UART_TX"
 		(shape input)
@@ -605,7 +657,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 138.43 83.82 90)
+		(at 135.89 82.55 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -613,24 +665,26 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1658094f-595e-4e8b-9a3b-d8eb1d8e6a18")
-		(property "Reference" "C37"
-			(at 138.43 76.2 90)
+		(property "Reference" "C41"
+			(at 139.7 81.2799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Value" "1u"
-			(at 138.43 78.74 90)
+			(at 139.7 83.8199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 142.24 82.8548 0)
+			(at 134.9248 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -639,7 +693,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 138.43 83.82 0)
+			(at 135.89 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -648,7 +702,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 138.43 83.82 0)
+			(at 135.89 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -663,9 +717,9 @@
 			(uuid "91b3bd41-1b8d-45a5-8b37-b0542a1c0365")
 		)
 		(instances
-			(project ""
+			(project "PCB_Aquarium2"
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/6b08732c-65b5-4020-967e-cc3e23d6bed3"
-					(reference "C37")
+					(reference "C41")
 					(unit 1)
 				)
 			)
@@ -673,7 +727,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 134.62 83.82 0)
+		(at 133.35 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -681,8 +735,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19a77967-e0f9-4e89-b490-377cd5f65d77")
-		(property "Reference" "#PWR085"
-			(at 134.62 87.63 0)
+		(property "Reference" "#PWR083"
+			(at 133.35 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -691,7 +745,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 134.62 78.74 0)
+			(at 133.35 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -699,7 +753,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 134.62 83.82 0)
+			(at 133.35 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -708,7 +762,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 134.62 83.82 0)
+			(at 133.35 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -717,7 +771,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 134.62 83.82 0)
+			(at 133.35 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -731,7 +785,7 @@
 		(instances
 			(project ""
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/6b08732c-65b5-4020-967e-cc3e23d6bed3"
-					(reference "#PWR085")
+					(reference "#PWR083")
 					(unit 1)
 				)
 			)
@@ -747,7 +801,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "30c7b0ce-de1d-49f6-93ff-de0fc9ffb779")
-		(property "Reference" "J35"
+		(property "Reference" "J34"
 			(at 149.86 86.3599 0)
 			(effects
 				(font
@@ -807,7 +861,7 @@
 		(instances
 			(project ""
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/6b08732c-65b5-4020-967e-cc3e23d6bed3"
-					(reference "J35")
+					(reference "J34")
 					(unit 1)
 				)
 			)
@@ -823,7 +877,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "79c8ea82-c6ed-4576-9595-b3aa0411aad9")
-		(property "Reference" "#PWR084"
+		(property "Reference" "#PWR082"
 			(at 128.27 80.01 0)
 			(effects
 				(font
@@ -873,7 +927,7 @@
 		(instances
 			(project ""
 				(path "/4f9429d5-fbb3-48e9-90dd-7ff0c2950e6f/6b08732c-65b5-4020-967e-cc3e23d6bed3"
-					(reference "#PWR084")
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)
