@@ -30219,6 +30219,14 @@
 	)
 	(segment
 		(start 140.46 103.43)
+		(end 139.35 103.43)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "596aa08f-db5d-41e9-a781-b1c9c1d0bd20")
+	)
+	(segment
+		(start 140.46 103.43)
 		(end 142.03 103.43)
 		(width 0.2)
 		(layer "F.Cu")
@@ -30282,14 +30290,6 @@
 		(uuid "7268fdd6-33ee-4bad-89e4-4907a16d826d")
 	)
 	(segment
-		(start 140.46 101.305)
-		(end 140.46 102.36)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 1)
-		(uuid "76de436f-b778-4254-85e3-b42b1349a0fb")
-	)
-	(segment
 		(start 143.54 102.85)
 		(end 144.12 102.85)
 		(width 0.2)
@@ -30330,12 +30330,28 @@
 		(uuid "928799ea-27eb-4816-8834-d45b69e6f00f")
 	)
 	(segment
+		(start 139.85 101.305)
+		(end 139.33 101.825)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "948e089d-8f98-4a8a-af69-c93b68cd54d6")
+	)
+	(segment
 		(start 145.06 93.93)
 		(end 146.11 92.88)
 		(width 0.2)
 		(layer "F.Cu")
 		(net 1)
 		(uuid "994768b0-8e0b-4cf4-836d-5e10ce854e5f")
+	)
+	(segment
+		(start 140.46 101.305)
+		(end 139.85 101.305)
+		(width 0.2)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "9ec2ac1d-4069-4025-9fea-0632bdc1b9b4")
 	)
 	(segment
 		(start 153.15 105.93)
@@ -30384,14 +30400,6 @@
 		(layer "F.Cu")
 		(net 1)
 		(uuid "b8a95c5c-f52f-4ec5-8492-193cf3003b50")
-	)
-	(segment
-		(start 140.46 102.36)
-		(end 140.46 103.43)
-		(width 0.2)
-		(layer "F.Cu")
-		(net 1)
-		(uuid "c3c75884-2020-44f9-88b5-566aa0ae8b09")
 	)
 	(segment
 		(start 142.03 103.43)
@@ -30482,6 +30490,14 @@
 		(uuid "f34d4804-a003-4546-8d46-cd14d47bc715")
 	)
 	(via
+		(at 139.33 101.825)
+		(size 0.45)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 1)
+		(uuid "06085a39-f6e3-408b-a483-9752ea5a3523")
+	)
+	(via
 		(at 158.395958 95.352608)
 		(size 0.45)
 		(drill 0.3)
@@ -30528,6 +30544,14 @@
 		(layers "F.Cu" "B.Cu")
 		(net 1)
 		(uuid "98671849-514e-4f70-bc88-501ee1ef19d2")
+	)
+	(via
+		(at 139.35 103.43)
+		(size 0.45)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(net 1)
+		(uuid "9ab850bd-fe27-41b5-9725-76a9bcb9e2e1")
 	)
 	(via
 		(at 135.1 119.75)
