@@ -2920,6 +2920,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "5V 3A\nJST XH + AWG 24"
+		(exclude_from_sim no)
+		(at 46.736 48.514 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2f8a7374-3882-4562-9c8b-5611876437e4")
+	)
 	(text "4VDDx100n"
 		(exclude_from_sim no)
 		(at 122.682 44.704 0)
