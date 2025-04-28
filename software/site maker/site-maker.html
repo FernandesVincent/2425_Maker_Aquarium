@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maker Aquarium</title>
+
+  <!-- Style CSS -->
+  <style>
+
+    body{
+      margin: 0;
+      padding: 0;
+    }
+
+    .body-light {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    .body-dark {
+      font-family: Arial, sans-serif;
+      background-color: #333;
+      color: #f2f2f2;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      height: auto;
+    }
+
+    .header-title {
+      margin: 0;
+      padding: 0; 
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005f99;
+    }
+
+    .mainText {
+      text-align: center;
+    }
+
+    .grid-container {
+      display: grid;
+      height: 1000px;
+      width: 100%;
+      grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+      grid-template-rows: repeat(3, 1fr);    /* 3 lignes égales */
+      gap: 2px;
+      margin-top: 50px; 
+    }
+
+    .cell {
+      border: 1px solid #333;
+      background-color: white;
+      display: flex;
+      flex-direction: column; /* Ajout important */
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+
+    .grid-2-Columns {
+      display: grid;
+      width: 100%;
+      height: 100px;
+      grid-template-columns: 1fr 3fr;
+      gap: 10px;
+    }
+
+    /* Modifications pour le bouton */
+    .header-btn {
+      position: fixed;   /* Fixe le bouton */
+      top: 0;            /* Le place tout en haut */
+      right: 0;          /* Le place tout à droite */
+      background-color: #004080;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 10;       /* Assure que le bouton soit toujours visible au-dessus du contenu */
+    }
+    .h2-test{
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <h1>Maker Aquarium</h1>
+    </div>
+  </header>
+  <button class="header-btn" onclick="toggleTheme()">🌓</button>
+  <div class="mainText" style="white-space: pre-line;">
+    Bonjour je m'appelle Olivier de chez Carglass.
+  </div>
+
+  <div class="grid-2-Columns">
+      <div class="h2-test">
+        SOMMAIRE
+        <div>
+          <ul>
+            <li><a href="#section1">Aller à la section 1</a></li>
+            <li><a href="#section2">Aller à la section 2</a></li>
+            <li><a href="#section3">Aller à la section 3</a></li>
+            <li><a href="#section4">Aller à la section 4</a></li>
+          </ul>          
+        </div>
+      </div>
+    <div class="cell">
+      <div id="section1">
+        <h2>Section 1</h2>
+        <p>Contenu de la section 1...</p>
+      </div>
+      
+      <div id="section2">
+        <h2>Section 2</h2>
+        <p>Contenu de la section 2...</p>
+      </div>
+      
+      <div id="section3">
+        <h2>Section 3</h2>
+        <p>Contenu de la section 3...</p>
+      </div>
+      
+      <div id="section4">
+        <h2>Section 4</h2>
+        <p>Contenu de la section 4...</p>
+      </div>
+    </div>
+
+
+
+
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("body-dark");
+    }
+  </script>
+
+</body>
+</html>
+
+
