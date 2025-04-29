@@ -1,5 +1,5 @@
-Maker Aquarium
-==============
+Aquarium Automatisé
+===================
 
 SOMMAIRE
 
@@ -13,10 +13,8 @@ SOMMAIRE
 *   [Écrans](#section8)
 *   [Code](#section9)
 *   [Câblage](#section10)
-*   [Lumière & nourriture](#section11)
-*   [Résultat Final](#section12)
-*   [Conclusion](#section13)
-*   [Futur du projet](#section14)
+*   [Résultat et Conclusion](#section11)
+*   [Futur du projet](#section12)
 
 Préambule
 ---------
@@ -154,6 +152,29 @@ Simplement présent pour pouvoir programmer le microprocesseur.
 
 J'ai prévu un connecteur pour le module HC05 même si l'utilisation de celui-ci ne se fera qu'à la toute fin du projet. L'objectif étant de connecter un pc ou un téléphone en bluetooth à ce module afin de récupérer l'ensemble des paramètres comme le font les écrans mais cette fois sur un pc ou un téléphone, l'objectif ultime étant le développement d'une appilcation. Revenons en aux PCBs, vous l'aurez compris mais ici nous avons 2 PCBs avec des rôles bien distinct, le premier servant à contrôler l'ensemble du projet tandis que le second ne gère que les boutons et à se connecter aux écrans. Vous pouvez trouver ci-dessous deux photos par PCB suivies d'un lien, les photos correspondent aux schemtatic et routage des PCB effectués sous KiCad 9.0 et le fichier quant à lui est là Bill Of Material (BOM) contenant l'ensemble des composants nécessaires à la fabrication des PCBs.
 
-  
+Écrans
+------
 
-Powered by [Froala Editor](https://www.froala.com/wysiwyg-editor?pb=1 "Froala Editor")
+Nous avons d'ores et déjà parlé succinctement du rôle des écrans dans le projet c'est pourquoi j'aimerais ici m'attarder plutôt sur la partie code associé à ces écrans. En effet, Les écrans que j'ai commandé sont les suivants : Ces écrans peuvent communiquer soit en I2C (avec 2 adresses possibles : 0x7A et 0x78) soit en SPI. Or, et je pense que vous l'avez compris avec la partie précédente mais nous avons beaucoup de modules différents avec lesquels le microprocesseur doit communiquer. Le microprocesseur en question est le STM32G474RET6 qui possède 3 I2C, ce qui est parfait pour notre projet car nous pouvons commander 2 écrans avec un seul I2C. Mais à cause du nombre très élevés du nombre de pins que le microprocesseur doit allouer au reste du projet, les pins que les 3 I2C utilisent ne sont plus disponibles. Il m'a donc fallu me rabattre sur le SPI qui bien que nécessitant un nombre de pins plus élevés est plus pratique dans ce cas pour deux : 1 seul SPI peut gérer les 6 écrans à conditionner de leur réservé un pin de sélection (Chip Select (CS))chacun mais également car la plupart des pins qu'il utilise peuvent être de simple GPIO (comme CS) voir même non obligatoire en fonction de l'utilisation. Par exemple dans notre cas nous n'avons pas besoin du pin MOSI (Master Out Slave In) car on attend pas de réponse de la part des écrans. Le gros problème que j'avais concernant le SPI est que je n'avais jamais travaillé ce protocole auparavant, j'ai donc du apprendre comment il fonctionne ce qui ne fut, heureusement pas la partie la plus compliquée. Cependant, là où je me suis heurté à un mur c'est au moment de la recherche de library pour utiliser ce protocole avec le driver de mes écrans (le SSD1315) qui n'est malheureusement pas le driver le plus utilisé ce qui implique donc que les library que j'ai trouvées n'avaient pas directement de library pour ce driver, même si il semblerait que celles du driver SSD1306 fonctionne, du moins en partie, avec le SSD1315. De plus, j'ai également reçu de la part de mon encadrant une library faîte pour mon driver mais en I2C. Au vu du temps qu'il me restait à ce moment là j'ai préféré me concentrer sur d'autres aspects du projet ce qui fait qu'à l'heure où j'écris ces lignes, les écrans ne sont pas encore fonctionnels.
+
+Code
+----
+
+Nous avons déjà eu l'occasion d'aborder le sujet du code dans ce projet mais j'aimerais y dédier une partie car il y a quand même des notions à ajouter et que je ne pourrais diluées dans aucune aitre partie. Veuillez tout d'abord regarder le diagramme d'architecture du code présent ci-dessous: Nous avons déjà aborder la partie de la RaspberryPi excepté le fait que pour effectué la reconnaissance colorimétrique j'ai du utiliser OpenCV. Concernant le code du STM32 il est, je pense, nécessaire de recontextualiser: Pour ce projet nous devons effectué des changements d'eau à un intervalle fixe (10% de l'eau de l'aquarium chaque semaine), de même il faut nourrir les poissons et effectuer les test en gouttes à intervalles réguliers. Pour effectuer cela sachant que le projet n'est pas connecté à Internet, il m'a fallu créer un horloge interne qui peux fonctionner d'elle même après avoir flasher le microprocesseur avec le code présent sur mon PC. Le fichier la contenant peut être trouver sur mon GitHub. Cette Horloge démarre à partir d'un date définit arbitrairement et permet de réaliser des actions du type : si on est au jour X à l'heure Y et à la minute Z : fait telle action. De plus, comme je ne commande en moteur que des servomoteurs basiques, il me suffit de leur envoyer des PWMs pour définir la position d'arrivé et ensuite les faire revenir à leur positions de départ une fois leur action finie. Le seul inconvénient de cela est que dois tester chaque mouvement de mes servomoteurs pour plusieurs valeurs de PWMs afin de pouvoir savoir quelle valeur de PWM serait la meilleure. Une méthode plus évoluée serait de créer une boucle for qui incrémente la valeur de la PWM à chaque itération. Finalement, Les LEDs sont commandées via DMA grâce à une librarie crée par l'un des professeurs de l'école. La seule chose est que je dois définir des valeurs références pour la couleur des LEDs afin que l'usager puisse par l'appui des boutons, passer d'une couleur à une autre. Une amélioration serait d'avoir 3 encodeur rotatif permettant à l'usager d'avoir la possibilité de régler la couleur de la lumière de son précision avec une précision qu'il n'a pas actuellement.
+
+Câblage
+-------
+
+Au vu du projet et du nombre de modules à connecter aux PCBs vous vous doutez que le nombre de câbles à sertir est conséquent ! Et c'est effectivement le cas, pour ce projet j'ai du sertir énormément de câbles pour différents types de connecteurs : JST EH, JST XH, Duponts. De plus, j'ai également du simplement dénuder des câbles afin de pouvoir les souder à d'autres notamment pour les pompes ou les câbles d'alimentation. Mais le câblage ne s'arrête pas à sertir un câble, il faut également les "emballer". C'est à dire qu'il faut entourer les câble de gaine tressée pour les protéger mécaniquement et thermiquement mais également pour les organiser. Mais il faut également les entourer de gaine thermorétractable pour fixer la gaine tressée aux câbles au niveau des extrémités pour pas qu'elle ne bouge mais également au niveau des points de soudure pour protéger ce point notamment si il y a un autre câble souder à côté, ils sont ainsi isolés l'un de l'autre et l'on ne risque pas de mauvais contacts.
+
+Résultat et Conclusion
+----------------------
+
+Tout au long de cette présentation vous avez pu voir différentes parties du projet mais il est temps de montrer le résultat que j'ai réussi à obtenir à la fin de ce projet: Comme vous pouvez le voir je n'ai pas pris de vidéos avec l'aquarium remplit et le système en fonctionnement et la raison à cela est simple: je n'ai pas réussi à finir et emboiter toutes les parties du rpojet dans le temps impartit. Pour conclure cette présentation j'aimerais revenir sur ce qu'à pu m'apporter ce projet. En effet, ce projet malgré le fait que je n'ai pas pu le finir m'a quand même permis de développer toutes les compétences que l'on a pu développées au cours de cette présentation, des compétences que j'avais déjà mais que j'ai pu grandement améliorées comme la création et la soudure de PCBs ou bien des compétences que je n'avais pas encore eu l'occasion de développer durant mon parcours comme la découpe LASER, la modélisation et l'impression 3D. Au vu de mon niveau, ce projet était sans nul doute ambitieux, surement trop d'ailleurs au vu du temps impartit mais c'est ce qui en fait un bon projet dans le sens où j'ai pu apprendre comme je n'ai jamais appris avec n'importe quel autre projet.
+
+Futur du Projet
+---------------
+
+Bien évidemment je ne compte pas m'arrêter là pour ce projet. En effet, il me reste un an pour le finir avant de finir mes études et je compte bien profiter de cette année pour finir le projet et y apporter toutes les améliorations dont j'ai pu parler au sein de cette présentation et qui sait peut-être que d'autres me viendront à l'esprit entre temps !
+
+    
