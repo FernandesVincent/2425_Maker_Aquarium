@@ -24,11 +24,11 @@ while(True):
     #pixel_center = hsv[centerY, centerX]
     #print(pixel_center)
 
-    val = pixel_value.pixel_value(frame, centerX, centerY)
-    print(val)
-    val_test = [7,81,164]
-    if np.any(val == val_test):
-       break
+    #val = pixel_value.pixel_value(frame, centerX, centerY)
+    #print(val)
+    #val_test = [7,81,164]
+    #if np.any(val == val_test):
+    #   break
 
     key = cv2.waitKey(1)
     if key ==27: 
