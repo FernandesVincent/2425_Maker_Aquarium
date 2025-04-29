@@ -315,4 +315,3 @@ Bien évidemment je ne compte pas m'arrêter là pour ce projet. En effet, il me
 
   
 
-Powered by [Froala Editor](https://www.froala.com/wysiwyg-editor?pb=1 "Froala Editor")
